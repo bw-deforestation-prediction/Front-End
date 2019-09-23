@@ -47,14 +47,13 @@
 
     nav {
         width: 40%;
-        height: 100%;
-       
+        height: 100%;       
         display: flex;    
         justify-content: space-around;
         align-items: center;
     }
 
-    a { 
+    NavLink { 
         display: flex;
         align-items: center;  
         justify-content: flex-end; 
@@ -70,11 +69,11 @@
     }
      
     
-    a.active {    
+    NavLink.active {    
         color: white;
     }
     
-    a:hover {
+    NavLink:hover {
         color: #e65100;
     }
   }

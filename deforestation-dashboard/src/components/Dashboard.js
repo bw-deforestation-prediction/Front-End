@@ -5,8 +5,7 @@ import 'semantic-ui-css/semantic.min.css';
 //import "../styling/App.css";
 import { axiosWithAuth } from '../utils/axiosWithAuth';
 
-import AddExpenseForm from "./AddExpenseForm";
-import ExpenseDetails from "./ExpenseDetails.js";
+
 import DashboardHeader from "./DashboardHeader.js";
 
 export default function Dashboard (props) {
@@ -117,124 +116,13 @@ export default function Dashboard (props) {
             </div>*/}
 
             {/* dashboard*/}
-            <div className = "dashboard-div">
+            
+        </div>
 
-                {/* dashboard*/}
-                <div className = "dashboard-header-div">
+    );
 
-                <Modal trigger = {
-
-                <Button>Add Expense</Button>               
-                } closeIcon>
-
-                <Modal.Header>Add Expense</Modal.Header>
-
-                <AddExpenseForm addExpense = {addExpense}/>                                     
-
-                </Modal>
-
-                {/*{  
-                    expenses.length > 0 ?
-                    <Modal trigger = {
-
-                        <Button>Add Expense</Button>               
-                        } closeIcon>
-
-                        <Modal.Header>Add Expense</Modal.Header>
-
-                        <AddExpenseForm addExpense = {addExpense}/>                                     
-           
-                    </Modal>
-                    :
-                    null 
-                    }*/}
-
-                        <h1>Welcome {user.firstname} </h1>
-
-                    <Button onClick={logout}> Log Out </Button>                    
-        
-                   
-        
-                </div>
-                
-                {/* DISPLAYS THE OWED AND OWES RUNNING TOTALS */}
-                <div className="totals-summary-div">
-                    
-
-                    <div className = "total-div">                    
-                        Your Friends Owe You
-                        <p className = "owedTotal"> ${owedTotal} </p> {/* update the totals here */}
-
-                    </div>
-                </div>
-                
-                {/* LIST OF BILLS HISTORY */}
-                <div className = "bills-list-div">  
-                   
-                    {
-                        expenses.length > 0 ? 
-                        <ExpenseDetails setExpenses={setExpenses} expenses = {expenses} addExpense = {addExpense} editExpense = {editExpense}/> 
-                        : 
-                        <Modal trigger = {
-
-                            <Button>Add An Expense To Start Splitting</Button>               
-                            } closeIcon>
-    
-                            <Modal.Header>Add an Expense</Modal.Header>
-    
-                            <AddExpenseForm addExpense = {addExpense} />                                     
-               
-                        </Modal>
-                    }                
-                       
-                        
-                                   
-                    
-                </div>  {/*end bills-list-div */}
-
-            </div> {/*end dashboard div */}
-        
-        </div> /*end container div */
-    
-    );//end return
-
-}//end function
-
-/************************************TO DISPLAY RECEIVED NOTIFICATIONS***************************/
-/*
-const [receivedNotifications, setReceivedNotifications] = useState([]);
-
-//put this inside the useEffect()
- axiosWithAuth().get(`https://build-split-the-bill.herokuapp.com/api/notifications`)
-            .then(res => {
-              console.log("you have notifications", res.data.notifications);
-              setReceivedNotifications(res.data.notifications);
-            })
-            .catch(err => {
-              console.log(err);
-            })
-
-//put this in the <div className = "navbar">
- <div className = "notifications-received-display">
-
-            <div className = "notification-title">
-
-            <h3>Outstanding Bills</h3>
-
-            </div>
-
-            <div className = "notification-alerts">
-
-            {receivedNotifications.map( (notification, index) => 
-
-            <p className = "alerts">{`${notification.email} `}</p>               
-
-                
-            )}
-
-</div>
+}
 
 
 
 
-*/
