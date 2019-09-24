@@ -7,6 +7,7 @@ import { axiosWithAuth } from '../utils/axiosWithAuth';
 
 
 import DashboardHeader from "./DashboardHeader.js";
+import Profile from './Profile/Profile';
 
 export default function Dashboard (props) {
 
@@ -73,7 +74,7 @@ export default function Dashboard (props) {
     //RETURNS A SUCCESS MESSAGE AND NOT ACTUAL DATA
 
     const editExpense = (editedExpense) => {
-       
+    
         //create an array called expensesCopy and spread in the contents of the expenses array
         const expensesCopy = [...expenses];
         
@@ -116,6 +117,8 @@ export default function Dashboard (props) {
             </div>*/}
 
             {/* dashboard*/}
+
+            <Profile />
             
         </div>
 

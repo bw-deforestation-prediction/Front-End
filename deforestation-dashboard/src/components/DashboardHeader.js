@@ -4,8 +4,6 @@ import { NavLink } from 'react-router-dom';
 
 const DashboardHeader = () => {
 
- 
-
   return (
     <div className="app-header">
       
@@ -18,7 +16,7 @@ const DashboardHeader = () => {
                 <NavLink to="" > DATA BY COUNTRY </NavLink>           
                 <NavLink to="/" > LOG OUT </NavLink>            
                 
-       </nav>
+      </nav>
 
 
 
