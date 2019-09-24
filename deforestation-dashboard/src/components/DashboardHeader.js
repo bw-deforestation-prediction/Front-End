@@ -8,17 +8,28 @@ const HeaderText = styled.h1``;
 
 const DashboardHeader = () => {
   return (
-    <NavBar className="navigation">
+    <NavBar className="navigation" id="page-top">
       <HeaderText>
         <b>Deforestaion Dashboard</b>
       </HeaderText>
       <nav>
-        <NavLink>Home</NavLink>
+        {/* ////////////// Need to add corect href for home and about pages ////////////  */}
+        <NavLink className="nav-links" to="/">
+          Home
+        </NavLink>
 
-        <NavLink>About</NavLink>
+        <NavLink className="nav-links" to="about the team page ">
+          About
+        </NavLink>
 
-        <NavLink>Maps By Country</NavLink>
+        <NavLink className="nav-links" to="">
+          Maps By Country
+        </NavLink>
       </nav>
+      <div>
+        <NavLink to="/register">Register</NavLink>
+        <NavLink to="/">Login</NavLink>
+      </div>
     </NavBar>
   );
 };
