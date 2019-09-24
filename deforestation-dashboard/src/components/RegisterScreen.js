@@ -25,8 +25,8 @@ const Navbar = () => {
 
 const RegisterScreen = (props) => {
   const [newUserInfo, setNewUserInfo] = useState({
-    firstname: '',
-    lastname: '',
+    first_name: '',
+    last_name: '',
     email: '',
     password: ''
   })
@@ -36,27 +36,26 @@ const RegisterScreen = (props) => {
       ...newUserInfo,
       [e.target.name]: e.target.value
     })
-    console.log(newUserInfo)
+    console.log("new user info in handlechange", newUserInfo);
   }
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    axios.post('https://build-split-the-bill.herokuapp.com/api/users/register', newUserInfo)
-    
+    axios.post('https://deforestation.herokuapp.com/api/users/register', newUserInfo)    
       .then(res => {
         localStorage.setItem('userId', res.data.id);
-        console.log(res);
-        axios.post('https://build-split-the-bill.herokuapp.com/api/users/login', {email: newUserInfo.email, password: newUserInfo.password})
+        console.log("registered response", res);
+        axios.post('https://deforestation.herokuapp.com/api/users/login', {email: newUserInfo.email, password: newUserInfo.password})
           .then(res => {
-            localStorage.setItem('token', res.data.token);
+            localStorage.setItem('token', res.data.token);            
             props.history.push('/dashboard');
           })
           .catch(err => {
-            console.log(err);
+            console.log(err.response);
           })
       })
       .catch(err => {
-        console.log(err);
+        console.log(err.response);
       })
   }
 
@@ -71,21 +70,19 @@ const RegisterScreen = (props) => {
           
             <input 
             onChange={handleChange}
-            name="firstname"
+            name="first_name"
             placeholder="First Name"
             type="text"
             required
             />
             <input 
             onChange={handleChange}
-            name="lastname"
+            name="last_name"
             placeholder="Last Name"
             type="text"
             required
-            />
-          
-
-         
+            />     
+        
             <input 
             onChange={handleChange}
             name="email"
