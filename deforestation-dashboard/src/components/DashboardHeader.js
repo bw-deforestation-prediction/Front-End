@@ -1,27 +1,37 @@
-import React from 'react';
-import { NavLink } from 'react-router-dom';
-import { Route } from "react-router-dom";
-//import treelogo from "../treelogo.png";
+import React from "react";
+import { NavLink } from "react-router-dom";
+import styled from "styled-components";
 
-const DashboardHeader = () => {   
+const NavBar = styled.div``;
 
+const HeaderText = styled.h1``;
+
+const DashboardHeader = () => {
   return (
-    <div className="app-header">
-      
-      {/*<img src = {treelogo} width = "100px" height = "70px"/>*/}
-      <h2>Deforestation Dashboard</h2>
-
+    <NavBar className="navigation" id="page-top">
+      <HeaderText>
+        <b>Deforestaion Dashboard</b>
+      </HeaderText>
       <nav>
-                <NavLink to="/dashboard/savedmaps" > SAVED MAPS </NavLink>
-                <NavLink to="/dashboard/maps" > MAPS </NavLink>
-                <NavLink to="/dashboard/databycountry" > DATA BY COUNTRY </NavLink>           
-                <NavLink to="/" > LOG OUT </NavLink>            
-                
-       </nav>
-      
+        {/* ////////////// Need to add corect href for home and about pages ////////////  */}
+        <NavLink className="nav-links" to="/">
+          Home
+        </NavLink>
 
-    </div>
+        <NavLink className="nav-links" to="about the team page ">
+          About
+        </NavLink>
+
+        <NavLink className="nav-links" to="">
+          Maps By Country
+        </NavLink>
+      </nav>
+      <div>
+        <NavLink to="/register">Register</NavLink>
+        <NavLink to="/">Login</NavLink>
+      </div>
+    </NavBar>
   );
-}
+};
 
 export default DashboardHeader;
