@@ -7,7 +7,7 @@ import RegisterScreen from './components/RegisterScreen';
 import Dashboard from "./components/Dashboard.js";
 import Navbar from "./components/Navbar";
 import SavedMaps from "./components/SavedMaps.js";
-import Maps from "./components/Maps.js";
+import MapViewByYear from "./components/MapViewByYear.js";
 import DataByCountry from "./components/DataByCountry.js";
 
 function App() {
@@ -28,7 +28,7 @@ function App() {
           <Route path ="/register" component={RegisterScreen} />                  
           <PrivateRoute path="/dashboard" component={Dashboard} />   
           <Route path ="/dashboard/savedmaps" component={SavedMaps} /> 
-          <Route path ="/dashboard/maps" component={Maps} />
+          <Route path ="/dashboard/maps" component={MapViewByYear} />
           <Route path ="/dashboard/databycountry" component={DataByCountry} />  
 
         {/*</Switch>*/}

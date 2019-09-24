@@ -47,7 +47,8 @@ const RegisterScreen = (props) => {
         console.log("registered response", res);
         axios.post('https://deforestation.herokuapp.com/api/users/login', {email: newUserInfo.email, password: newUserInfo.password})
           .then(res => {
-            localStorage.setItem('token', res.data.token);            
+            localStorage.setItem('token', res.data.token);   
+            console.log("login token data", res);         
             props.history.push('/dashboard');
           })
           .catch(err => {
