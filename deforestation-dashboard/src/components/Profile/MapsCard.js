@@ -1,6 +1,6 @@
 import React from "react";
 
-const ProfileCard = props => {
+const MapsCard = props => {
     return (
     <div className="map-list" key={props.id}>
 

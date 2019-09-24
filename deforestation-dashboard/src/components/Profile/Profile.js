@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
-import ProfileCard from './ProfileCard';
+import MapsCard from './MapsCard';
 
 export default function Profile (props) {
 
