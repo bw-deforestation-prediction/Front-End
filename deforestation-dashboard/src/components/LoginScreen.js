@@ -19,11 +19,12 @@ const LoginScreen = (props) => {
   const handleSubmit = (e) => {
     e.preventDefault();
     axios.post(
-      'https://build-split-the-bill.herokuapp.com/api/users/login', loginCredentials
+      'https://deforestation.herokuapp.com/api/users/login', loginCredentials
       )
       .then(res => {
         localStorage.setItem('token', res.data.token);
-        localStorage.setItem('userId', res.data.user.id);
+        console.log("login token data", res);
+        //localStorage.setItem('userId', res.data.user.id);
         props.history.push('/dashboard');
       })
       .catch (err => {
