@@ -4,7 +4,9 @@ import 'semantic-ui-css/semantic.css';
 import 'semantic-ui-css/semantic.min.css'; 
 //import "../styling/App.css";
 import { axiosWithAuth } from '../utils/axiosWithAuth';
-
+ import Maps from "./Maps.js";
+ import ReactDOM from 'react-dom';
+ 
 
 import DashboardHeader from "./DashboardHeader.js";
 
@@ -37,7 +39,8 @@ export default function Dashboard (props) {
 
     useEffect(() => {
         // get user details and set them to state "user"
-        axiosWithAuth().get(`https://build-split-the-bill.herokuapp.com/api/users/${localStorage.getItem('userId')}`)
+        //axiosWithAuth().get(`https://deforestation.herokuapp.com/api/users/${localStorage.getItem('userId')}`)
+        axiosWithAuth().get(`https://deforestation.herokuapp.com/api/users/${localStorage.getItem('userId')}`)
             .then(res => {
                 console.log(res);
                 setUser(res.data);
@@ -100,6 +103,8 @@ export default function Dashboard (props) {
         props.history.push('/');
     }
 
+    
+
 
     return (
 
@@ -116,6 +121,12 @@ export default function Dashboard (props) {
             </div>*/}
 
             {/* dashboard*/}
+
+            
+            
+
+
+
             
         </div>
 
