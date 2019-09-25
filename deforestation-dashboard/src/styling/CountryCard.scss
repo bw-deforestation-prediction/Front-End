@@ -9,7 +9,7 @@
     }
 }*/
 
-.material-card {
+/*.material-card {
     
     //border: 1px solid blue;
 
@@ -17,4 +17,16 @@
        
     //border: 1px solid red;
     }
-}
+}*/
+
+button {    
+    
+    background-color: #4caf50;
+    //background-color: dodgerblue;
+    font-size: 1.1rem;
+    padding: 3px;
+  }
+  button:hover {
+    background-color: dodgerblue;
+    color: white;
+  }

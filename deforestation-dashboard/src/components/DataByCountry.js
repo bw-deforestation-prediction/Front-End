@@ -2,8 +2,9 @@ import React, {useState, useEffect} from "react";
 import axios from "axios";
 import {countries} from "../data/data.js";
 import CountryCard from "./CountryCard.js";
+import { Link } from "react-router-dom";
 
-function DataByCountry(){
+function DataByCountry(props){
 
     const [countriesArray, setCountriesArray] = useState([]);
 
@@ -24,29 +25,10 @@ function DataByCountry(){
     /*const countryNames = ["Afghanistan", "Albania", "Algeria", "American Samoa", "Andorra", "Angola", "Antigua and Barbuda", "Argentina", "Aruba",  
                             "Azerbaijan", "Burundi", "Belgium", "Benin", "Burkina Faso", "Bangladesh", "Bulgaria", "Bahrain",
                             "Bahamas", "Bosnia and Herzegovina", "Belarus", "Belize", "Bermuda", "Bolivia", "Brazil",
-    "Barbados"
-    "Brunei Darussalam"
-    "Bhutan"
-    "Botswana"
-    "Central African Republic"
-    "Canada"
-    "Central Europe and the Baltics"
-    "Switzerland"
-    "Channel Islands"
-    "Chile"
-    "China"
-    "Cote d'Ivoire"
-    "Cameroon"
-    "Congo, Dem. Rep."
-    "Congo, Rep."
-    "Colombia"
-    "Comoros"
-    "Cabo Verde"
-    "Costa Rica"
-    "Caribbean small states"
-    "Cuba"
-    "Curacao"
-    "Cayman Islands"
+                            "Barbados", "Brunei Darussalam", "Bhutan", "Botswana", "Central African Republic", "Canada",
+                            "Central Europe and the Baltics", "Switzerland", "Channel Islands", "Chile", "China", Cote d'Ivoire",
+                            "Cameroon", "Congo, Dem. Rep.", "Congo, Rep.", "Colombia", "Comoros"
+                            "Cabo Verde", "Costa Rica", "Caribbean small states", "Cuba", "Curacao", "Cayman Islands"
     "Cyprus"
     "Czech Republic"
     "Germany"
@@ -54,66 +36,66 @@ function DataByCountry(){
     "Dominica"
     "Denmark"
     "Dominican Republic"
-    58: "Algeria"
-    59: "East Asia & Pacific (excluding high income)"
-    60: "Early-demographic dividend"
-    61: "East Asia & Pacific"
-    62: "Europe & Central Asia (excluding high income)"
-    63: "Europe & Central Asia"
-    64: "Ecuador"
-    65: "Egypt, Arab Rep."
-    66: "Euro area"
-    67: "Eritrea"
-    68: "Spain"
-    69: "Estonia"
-    70: "Ethiopia"
-    71: "European Union"
-    72: "Fragile and conflict affected situations"
-    73: "Finland"
-    74: "Fiji"
-    75: "France"
-    76: "Faroe Islands"
-    77: "Micronesia, Fed. Sts."
-    78: "Gabon"
-    79: "United Kingdom"
-    80: "Georgia"
-    81: "Ghana"
-    82: "Gibraltar"
-    83: "Guinea"
-    84: "Gambia, The"
-    85: "Guinea-Bissau"
-    86: "Equatorial Guinea"
-    87: "Greece"
-    88: "Grenada"
-    89: "Greenland"
-    90: "Guatemala"
-    91: "Guam"
-    92: "Guyana"
-    93: "High income"
-    94: "Hong Kong SAR, China"
-    95: "Honduras"
-    96: "Heavily indebted poor countries (HIPC)"
-    97: "Croatia"
-    98: "Haiti"
-    99: "Hungary"
-    100: "IBRD only"
-    101: "IDA & IBRD total"
-    102: "IDA total"
-    103: "IDA blend"
-    104: "Indonesia"
-    105: "IDA only"
-    106: "Isle of Man"
-    107: "India"
-    108: "Not classified"
-    109: "Ireland"
-    110: "Iran, Islamic Rep."
-    111: "Iraq"
-    112: "Iceland"
-    113: "Israel"
-    114: "Italy"
-    115: "Jamaica"
-    116: "Jordan"
-    117: "Japan"
+    "Algeria"
+    "East Asia & Pacific (excluding high income)"
+    "Early-demographic dividend"
+    "East Asia & Pacific"
+    "Europe & Central Asia (excluding high income)"
+    "Europe & Central Asia"
+    "Ecuador"
+    "Egypt, Arab Rep."
+    "Euro area"
+    "Eritrea"
+    "Spain"
+    "Estonia"
+    "Ethiopia"
+    "European Union"
+    "Fragile and conflict affected situations"
+    "Finland"
+    "Fiji"
+    "France"
+    "Faroe Islands"
+    "Micronesia, Fed. Sts."
+    "Gabon"
+    "United Kingdom"
+    "Georgia"
+    "Ghana"
+    "Gibraltar"
+    "Guinea"
+    "Gambia, The"
+    "Guinea-Bissau"
+    "Equatorial Guinea"
+    "Greece"
+    "Grenada"
+    "Greenland"
+    "Guatemala"
+    "Guam"
+    "Guyana"
+    "High income"
+    "Hong Kong SAR, China"
+    "Honduras"
+    "Heavily indebted poor countries (HIPC)"
+    "Croatia"
+    "Haiti"
+    "Hungary"
+    "IBRD only"
+    "IDA & IBRD total"
+    "IDA total"
+    "IDA blend"
+    "Indonesia"
+    "IDA only"
+    "Isle of Man"
+    "India"
+    "Not classified"
+    "Ireland"
+    "Iran, Islamic Rep."
+    "Iraq"
+    "Iceland"
+    "Israel"
+    "Italy"
+    "Jamaica"
+    "Jordan"
+    "Japan"
     118: "Kazakhstan"
     119: "Kenya"
     120: "Kyrgyz Republic"
@@ -274,12 +256,17 @@ function DataByCountry(){
                 const yearArray = innerArray(country);   
                 console.log("country array", country);           
 
-                return (
+                return (                    
+                    
                     <CountryCard
-                    code={country.Code}
-                    name={country.Country}
-                    yearArray={yearArray}
-                    key={index} />
+                    saveCharts = {props.saveCharts}
+                    code = {country.Code}
+                    name = {country.Country}
+                    yearArray = {yearArray}
+                    key = {index} 
+                    id = {index}  />                  
+                   
+                    
                 )
 
             })}       

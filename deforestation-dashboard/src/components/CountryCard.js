@@ -11,7 +11,8 @@ import Paper from "@material-ui/core/Paper";
 
 
 
-function CountryCard(props) {  
+function CountryCard(props) {   
+    
 
   const useStyles = makeStyles(theme => ({
     root: {    
@@ -37,9 +38,7 @@ function CountryCard(props) {
 
   const classes = useStyles();  
 
-  //const { addItem } = useContext(SavedContext);
-
-  return (
+    return (
     <Card className = "material-card">
       <CardContent>
         <Paper className={classes.root}>
@@ -71,7 +70,10 @@ function CountryCard(props) {
                     scope="row"
                     style={{ fontSize: "1.5rem", minWidth: "220px" }}
                   >
+                    {/***************SAVE BUTTON********************/}
                     
+                    <button onClick = { () => props.saveCharts( props["name"], props.id) }> Save </button>
+
                   </TableCell>
                   {props.yearArray.map(year => {
                     return (
