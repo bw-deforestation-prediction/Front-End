@@ -73,14 +73,16 @@ const RegisterScreen = (props) => {
             onChange={handleChange}
             name="first_name"
             placeholder="First Name"
-            type="text"
+            type="text"  
+            value = {newUserInfo.first_name}          
             required
             />
             <input 
             onChange={handleChange}
             name="last_name"
             placeholder="Last Name"
-            type="text"
+            type="text"   
+            value = {newUserInfo.last_name}        
             required
             />     
         
@@ -89,6 +91,7 @@ const RegisterScreen = (props) => {
             name="email"
             placeholder="Desired Email"
             type="email"
+            value = {newUserInfo.email}
             required
             />
             <input 
@@ -96,6 +99,7 @@ const RegisterScreen = (props) => {
             name="password"
             placeholder="Desired Password"
             type="password"
+            value = {newUserInfo.password}
             required
             />
          

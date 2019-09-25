@@ -14,7 +14,7 @@ const DashboardHeader = () => {
       <nav>
                 <NavLink to="/dashboard/savedmaps" > SAVED MAPS </NavLink>
                 <NavLink to="/dashboard/maps" > MAPS BY YEAR </NavLink>
-                <NavLink to="/dashboard/databycountry" > DATA BY COUNTRY </NavLink>           
+                <NavLink to="/dashboard/databycountry" > FOREST COVER BY COUNTRY </NavLink>           
                 <NavLink to="/" > LOG OUT </NavLink>            
                 
        </nav>
