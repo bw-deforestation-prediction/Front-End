@@ -12,7 +12,8 @@ padding:0 10px;
 align-items: center;
 background-color: #0a8334;
 height: 45px;
-color: #b7791c;
+color: #c96b00;
+box-shadow: 0 0 3px #333;
 
 img {
   width: 8%;
@@ -39,7 +40,7 @@ a{
 }
 a:hover {
   
-  color: #b7791c;
+  color: #c96b00;
 }
 img{
   width:15px;
