@@ -58,7 +58,7 @@ const DashboardHeader = () => {
       
       <HeaderText>
        <img src={treeiconwhite} />
-        <b>Deforestaion Dashboard</b>
+        <b>Deforestation Dashboard</b>
       </HeaderText>
       </div>
       <Links>
