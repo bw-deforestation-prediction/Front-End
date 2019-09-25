@@ -114,7 +114,7 @@ export default function Dashboard(props) {
                                         
     
             </div>*/}
-      <DashboardFooter />
+      {/* <DashboardFooter /> */}
       {/* dashboard*/}
     </div>
   );
