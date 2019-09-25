@@ -97,7 +97,7 @@ const RegisterScreen = (props) => {
             type="password"
             required
             />
-         
+        
           <button>Sign Up</button>
         </form>
 

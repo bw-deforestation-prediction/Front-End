@@ -56,13 +56,13 @@ const DashboardHeader = () => {
     <NavBar className="navigation" id="page-top">
       <div className='logo'> 
       
-      <HeaderText>
-       <img src={treeiconwhite} />
-        <b>Deforestation Dashboard</b>
-      </HeaderText>
+        <HeaderText>
+          <img src={treeiconwhite} />
+          <b>Deforestaion Dashboard</b>
+        </HeaderText>
       </div>
       <Links>
-     
+    
         {/* ////////////// Need to add corect href for home and about pages ////////////  */}
         <NavLink className="nav-links" to="/">
         <img src={treeiconwhite} />

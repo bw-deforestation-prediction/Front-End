@@ -8,6 +8,7 @@ import { Route } from "react-router-dom";
 import DashboardHeader from "./DashboardHeader";
 import DashboardFooter from "./DashboardFooter";
 import LoginScreen from "./LoginScreen";
+import Profile from './Profile/Profile';
 
 export default function Dashboard(props) {
   const [user, setUser] = useState({});
@@ -109,11 +110,12 @@ export default function Dashboard(props) {
       <DashboardHeader />
       <Route path="/LonginScreen" component={LoginScreen} />
       {/* logo and log out button 
-            <div className = "navbar">                    
+            <div className = "navbar">*/}   
+      <Profile />
 
                                         
     
-            </div>*/}
+            {/*</div>*/}
       {/* <DashboardFooter /> */}
       {/* dashboard*/}
     </div>
