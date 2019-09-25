@@ -55,11 +55,11 @@ const DashboardHeader = () => {
   return (
     <NavBar className="navigation" id="page-top">
       <div className='logo'> 
-      
-        <HeaderText>
-          <img src={treeiconwhite} />
-          <b>Deforestaion Dashboard</b>
-        </HeaderText>
+   
+      <HeaderText>
+      <img src={treeiconwhite} />
+        <b>Deforestation Dashboard</b>
+      </HeaderText>
       </div>
       <Links>
     
