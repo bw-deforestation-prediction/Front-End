@@ -23,7 +23,7 @@ function App() {
         {/*<Navbar/>*/}
         
         {/* <Switch> */}
-       
+      
           <Route exact path="/" component={LoginScreen} />
           <Route path ="/register" component={RegisterScreen} />                  
           <PrivateRoute path="/dashboard" component={Dashboard} />   
