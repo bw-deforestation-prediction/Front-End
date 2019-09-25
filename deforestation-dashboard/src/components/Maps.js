@@ -11,8 +11,8 @@ function Maps() {
   return(
 
       <div id = "here">
-         
-         maps
+        
+        maps
 
       </div>
   ); 

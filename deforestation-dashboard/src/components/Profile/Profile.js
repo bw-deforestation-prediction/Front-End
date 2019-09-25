@@ -1,22 +1,17 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
-import MapsCard from './MapsCard';
 
 export default function Profile (props) {
 
     const [user, setUser] = useState([]);
-    const [activeID] = useState(localStorage.userID);
+    // const [activeID] = useState(localStorage.userID);
 
     useEffect(() => {
 
-    // const id = localStorage.getItem('userId');
-    // const idtwo = id.toString();
-    // console.log('id port', id);
-
-    // var number = 3;
+    const id = localStorage.getItem('userId');
 
     axios
-        .get(`https://deforestation.herokuapp.com/api/users/`)
+        .get(`https://deforestation.herokuapp.com/api/users/${id}`)
 
 
         .then(response => {
@@ -49,11 +44,18 @@ function ProfileInfo ({item}) {
     const {id, first_name, last_name, email} = item;
     
     return (
+            <>
             <div className="character-list " key={id}>
+                <h2>My Profile</h2>
                 <h3 className="personalInfo">Name: {first_name}</h3>
                 <h3 className="personalInfo">Last Name: {last_name}</h3>
                 <h3 className="personalInfo">Email: {email}</h3>
             </div>
+
+            <div className='mapRequest'>
+                <h3 className='mapRequest'>Would you like to follow the Progress of Specific Countries?</h3>
+            </div>
+            </>
             );
     }
 
