@@ -10,7 +10,7 @@ const MapsCard = props => {
     </div>
     );
 };
-export default ProfileCard;
+export default MapsCard;
 
 
 

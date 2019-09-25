@@ -16,7 +16,7 @@ export default function Profile (props) {
     // var number = 3;
 
     axios
-        .get(`https://deforestation.herokuapp.com/api/users/2`)
+        .get(`https://deforestation.herokuapp.com/api/users/`)
 
 
         .then(response => {
