@@ -47,7 +47,8 @@ const RegisterScreen = (props) => {
         console.log("registered response", res);
         axios.post('https://deforestation.herokuapp.com/api/users/login', {email: newUserInfo.email, password: newUserInfo.password})
           .then(res => {
-            localStorage.setItem('token', res.data.token);            
+            localStorage.setItem('token', res.data.token);   
+            console.log("login token data", res);         
             props.history.push('/dashboard');
           })
           .catch(err => {
@@ -72,14 +73,16 @@ const RegisterScreen = (props) => {
             onChange={handleChange}
             name="first_name"
             placeholder="First Name"
-            type="text"
+            type="text"  
+            value = {newUserInfo.first_name}          
             required
             />
             <input 
             onChange={handleChange}
             name="last_name"
             placeholder="Last Name"
-            type="text"
+            type="text"   
+            value = {newUserInfo.last_name}        
             required
             />     
         
@@ -88,6 +91,7 @@ const RegisterScreen = (props) => {
             name="email"
             placeholder="Desired Email"
             type="email"
+            value = {newUserInfo.email}
             required
             />
             <input 
@@ -95,6 +99,7 @@ const RegisterScreen = (props) => {
             name="password"
             placeholder="Desired Password"
             type="password"
+            value = {newUserInfo.password}
             required
             />
         

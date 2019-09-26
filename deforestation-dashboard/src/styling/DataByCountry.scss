@@ -1,0 +1,51 @@
+.country-view-div {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    //align-items: center;
+    //width: 100%;
+    height: auto;   
+    //border: 1px solid red;
+
+    .search-form-div {
+        display: flex;
+        justify-content: center;
+        width: 50%;
+        margin-top: 25px;
+        margin: 25px auto;
+    }
+
+    .search-form {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 60%;
+        height: 20%;
+        /*background-color: rgb(71, 161, 250);*/
+        /*background-color: #e383b9;*/
+        
+      }
+      
+      .search-form input {
+        width: 40%;
+        height: 30px;
+        margin-right: 10px;
+       
+      }      
+     
+
+      .search-form-button {    
+        width: 15%;
+        background-color: #4caf50;   
+        height: 30px;         
+      }
+      button:hover {
+        background-color: dodgerblue;
+        color: white;
+      }
+
+}
+
+
+
+

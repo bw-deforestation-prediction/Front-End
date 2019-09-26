@@ -46,6 +46,7 @@ const LoginScreen = (props) => {
           name="email"
           type="email"
           placeholder="Email"
+          value = {loginCredentials.email}
           required
           />
           <input 
@@ -54,6 +55,7 @@ const LoginScreen = (props) => {
           name="password"
           type="password"
           placeholder="Password"
+          value = {loginCredentials.password}
           required
           />
           <button>Sign In</button>

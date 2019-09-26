@@ -1,0 +1,31 @@
+/*.MuiPaper-root {
+    width: 1000px;
+    padding: 0;
+    border: 1px solid red;
+
+    .MuiTable-root {
+        width: 100%;
+        border: 1px solid blue;
+    }
+}*/
+
+/*.material-card {
+    
+    //border: 1px solid blue;
+
+    .card-content {
+       
+    //border: 1px solid red;
+    }
+}*/
+
+button {    
+    
+    background-color: #4caf50;    
+    font-size: 1.1rem;
+    padding: 3px;
+  }
+  button:hover {
+    background-color: dodgerblue;
+    color: white;
+  }

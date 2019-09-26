@@ -3,8 +3,8 @@ import { NavLink } from "react-router-dom";
 import styled from "styled-components";
 import treeiconwhite from '../treeiconwhite.png';
 
+
 const NavBar = styled.div`
-// border: 1px solid red;
 display: flex;
 width: 100%;
 justify-content: space-between;
@@ -25,7 +25,6 @@ img, b {
 `;
 
 const Links = styled.div `
-// border: 1px solid red;
 width: 30%;
 display: flex;
 justify-content: space-between;
@@ -48,11 +47,11 @@ img{
 }
 `;
 
-
-
 const HeaderText = styled.h1``;
 
 const DashboardHeader = () => {
+
+
   return (
     <NavBar className="navigation" id="page-top">
       <div className='logo'> 
@@ -86,6 +85,6 @@ const DashboardHeader = () => {
       </Links>
     </NavBar>
   );
-};
+}
 
 export default DashboardHeader;

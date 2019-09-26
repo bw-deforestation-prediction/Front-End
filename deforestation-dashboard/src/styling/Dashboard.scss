@@ -1,34 +1,6 @@
 .dashboard-container {
 
-  //***************used for outstanding bills display********************
-  /*display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: flex-start;
-  width: 100%;*/
-  /*.notifications-received-display {
-    display: flex;
-    flex-direction: column;
-    width: 100%;         
-    height: auto;
-        
-  }
-
-  .notification-alerts {
-    display: flex;
-  flex-direction: column;
-    justify-content: space-between;
-
-    .alerts {
-      margin: 3px 5px;
-      background: rgb(124, 34, 197);
-      color: white;      
-      padding: 5px;
-      border-radius: 3px;
-  }
-   */
-
-    display: flex;
+     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;

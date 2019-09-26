@@ -1,11 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 
-
-
-function Maps() {
-
-  //var x = document.getElementById("firstmap");
+function Maps({year}) {
 
   
   return(
@@ -17,10 +13,13 @@ function Maps() {
       </div>
   ); 
 
-  //ReactDOM.render(x, document.getElementById("here"));
+ 
 
   
 }
 
 
 export default Maps;
+
+
+
