@@ -26,7 +26,12 @@ function DataByCountry(props){
         return Object.entries(arrayIn).filter((subArray) => subArray[0] === "Country");
     }
 
-    
+    //capitalize the first letter of the search string
+    const capitalize = (str) => {
+
+        return str.charAt(0).toUpperCase() + str.slice(1);
+        
+    }
     
     const changeHandler = (event) => {
         event.preventDefault();
@@ -36,7 +41,9 @@ function DataByCountry(props){
 
     const clickHandler = (event) => {
        event.preventDefault();
-       if (window.find(query.search, true)) { 
+       const queryValue = query.search;
+       //capitalize(queryValue);
+       if (window.find(capitalize(queryValue), true)) { 
         document.execCommand("hiliteColor", false, "YellowGreen"); 
         
       }
@@ -55,20 +62,22 @@ function DataByCountry(props){
 
         <div className = "country-view-div">      
 
-         <div className="select-country">
+        <div className = "search-form-div">
 
-            <form >
+            <form className = "search-form">
                 <input type = "text"
                 onChange = {changeHandler}
                 placeholder = "Country Search..." 
                 value={query.search}
                 name = "search" 
                 />
-                <button onClick = {clickHandler} type="submit"> Search </button>
-            </form>                     
+                <button className = "search-form-button" onClick = {clickHandler} type="submit"> Search </button>
+            </form>  
+
+        </div>                   
                 
 
-            </div>                 
+                        
             
             {countriesArray.map((country, index) => {
                 const yearArray = innerArray(country);   
@@ -93,9 +102,9 @@ function DataByCountry(props){
         
         </div>
 
-
     );
 
 }
 
 export default DataByCountry;
+

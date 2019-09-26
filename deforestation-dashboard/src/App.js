@@ -10,6 +10,7 @@ import SavedCharts from "./components/SavedCharts.js";
 import MapViewByYear from "./components/MapViewByYear.js";
 import DataByCountry from "./components/DataByCountry.js";
 import CountryCard from "./components/CountryCard.js";
+import InteractiveMap from "./components/InteractiveMap.js";
 
 
 function App() {  
@@ -57,7 +58,7 @@ function App() {
           <Route path ="/dashboard/savedmaps" render={props => {
           return <SavedCharts {...props} deleteSavedChart ={deleteSavedChart} savedCharts = {savedCharts} /> }} />
 
-          <Route path ="/dashboard/maps" component={MapViewByYear} />         
+          <Route path ="/dashboard/maps" component={InteractiveMap} />         
           
           <Route path ="/dashboard/databycountry" render={props => {
           return <DataByCountry {...props} saveCharts = {saveCharts} />  }} /> 
