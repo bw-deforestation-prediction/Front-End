@@ -1,10 +1,11 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
 import styled from "styled-components";
-import treeiconwhite from '../treeiconwhite.png';
-
+import treeiconwhite from "../treeiconwhite.png";
 
 const NavBar = styled.div`
+
+
 display: flex;
 width: 100%;
 justify-content: space-between;
@@ -27,6 +28,10 @@ box-shadow: 0 0 3px #333;
 
 
 
+
+  img {
+    width: 8%;
+  }
 
 img {
   width: 8%;
@@ -90,53 +95,51 @@ img{
     display: unset;
   }
 }
+
 `;
 
 const HeaderText = styled.h1``;
 
 const DashboardHeader = () => {
-
-
   return (
     <NavBar className="navigation" id="page-top">
-      <div className='logo'> 
-   
-      <HeaderText>
-
-      <img src={treeiconwhite} />
-        <b>Deforestation Dashboard</b>
-      </HeaderText>
+      <div className="logo">
+        <HeaderText>
+          <img src={treeiconwhite} />
+          <b>Deforestation Dashboard</b>
+        </HeaderText>
       </div>
       <Links>
-
-            
-        {/* ////////////// Need to add correct href for home and about pages ////////////  */}
-        <NavLink className="nav-links" to="/">
-        <img src={treeiconwhite} />
+        <a className="nav-links" href="https://deforectationui.herokuapp.com/#">
+          <img src={treeiconwhite} />
           Home
-        </NavLink>
+        </a>
 
-        <NavLink className="nav-links" to="about the team page ">
-        <img src={treeiconwhite} />
+        <a
+          className="nav-links"
+          href="https://deforectationui.herokuapp.com/about.html"
+        >
+          <img src={treeiconwhite} />
           About
-        </NavLink>
+        </a>
 
-        <NavLink className="nav-links" to="/dashboard/profile">  
-        <img src={treeiconwhite} />      
+        <NavLink className="nav-links" to="/dashboard/profile">
+          <img src={treeiconwhite} />
           My Profile
         </NavLink>
 
         <NavLink className="nav-links" to="/dashboard/databycountry">
-        <img src={treeiconwhite} />
+          <img src={treeiconwhite} />
           Data By Country
-        </NavLink>          
-        
-        <NavLink to="/"><img src={treeiconwhite} />Log Out</NavLink>
+        </NavLink>
 
+        <NavLink to="/">
+          <img src={treeiconwhite} />
+          Log Out
+        </NavLink>
       </Links>
-
     </NavBar>
   );
-}
+};
 
 export default DashboardHeader;
