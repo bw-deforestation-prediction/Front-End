@@ -6,9 +6,9 @@ function Maps({year}) {
   
   return(
 
-      <div className = "maps-div">
-         
-         <img src = {require(`../maps/forest_coverage_${year}.png`)} />
+      <div id = "here">
+        
+        maps
 
       </div>
   ); 

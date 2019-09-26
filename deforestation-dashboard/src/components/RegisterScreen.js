@@ -102,7 +102,7 @@ const RegisterScreen = (props) => {
             value = {newUserInfo.password}
             required
             />
-         
+        
           <button>Sign Up</button>
         </form>
 

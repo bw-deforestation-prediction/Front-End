@@ -48,7 +48,7 @@ function App() {
       <div className="App">
         
         {/* <Switch> */}
-       
+      
           <Route exact path="/" component={LoginScreen} />
 
           <Route path ="/register" component={RegisterScreen} />     
