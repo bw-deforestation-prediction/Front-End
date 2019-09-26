@@ -17,6 +17,7 @@ const NavBar = styled.div`
   img {
     width: 8%;
   }
+
   img,
   b {
     filter: drop-shadow(0 0 1px rgba(0, 0, 0, 0.5));
@@ -58,7 +59,6 @@ const DashboardHeader = () => {
         </HeaderText>
       </div>
       <Links>
-        {/* ////////////// Need to add correct href for home and about pages ////////////  */}
         <a className="nav-links" href="https://deforectationui.herokuapp.com/#">
           <img src={treeiconwhite} />
           Home
