@@ -15,6 +15,7 @@ height: 45px;
 color: #c96b00;
 box-shadow: 0 0 3px #333;
 
+
 img {
   width: 8%;
   
@@ -25,9 +26,10 @@ img, b {
 `;
 
 const Links = styled.div `
-width: 30%;
+width: 50%;
 display: flex;
-justify-content: space-between;
+justify-content: space-around;
+
 a{
   color:white;
   font-size: 1.2rem;
@@ -57,13 +59,15 @@ const DashboardHeader = () => {
       <div className='logo'> 
    
       <HeaderText>
+
       <img src={treeiconwhite} />
         <b>Deforestation Dashboard</b>
       </HeaderText>
       </div>
       <Links>
-    
-        {/* ////////////// Need to add corect href for home and about pages ////////////  */}
+
+            
+        {/* ////////////// Need to add correct href for home and about pages ////////////  */}
         <NavLink className="nav-links" to="/">
         <img src={treeiconwhite} />
           Home
@@ -74,15 +78,20 @@ const DashboardHeader = () => {
           About
         </NavLink>
 
-        <NavLink className="nav-links" to="">
-        <img src={treeiconwhite} />
-          Maps By Country
+        <NavLink className="nav-links" to="/dashboard/profile">  
+        <img src={treeiconwhite} />      
+          My Profile
         </NavLink>
-      
-      
-        <NavLink to="/register"><img src={treeiconwhite} />Register</NavLink>
-        <NavLink to="/"><img src={treeiconwhite} />Login</NavLink>
+
+        <NavLink className="nav-links" to="/dashboard/databycountry">
+        <img src={treeiconwhite} />
+          Data By Country
+        </NavLink>          
+        
+        <NavLink to="/"><img src={treeiconwhite} />Log Out</NavLink>
+
       </Links>
+
     </NavBar>
   );
 }

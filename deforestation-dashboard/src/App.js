@@ -11,6 +11,7 @@ import MapViewByYear from "./components/MapViewByYear.js";
 import DataByCountry from "./components/DataByCountry.js";
 import CountryCard from "./components/CountryCard.js";
 import InteractiveMap from "./components/InteractiveMap.js";
+import Profile from "./components/Profile/Profile.js";
 
 
 function App() {  
@@ -51,11 +52,13 @@ function App() {
       
           <Route exact path="/" component={LoginScreen} />
 
-          <Route path ="/register" component={RegisterScreen} />     
+          <Route path ="/register" component={RegisterScreen} /> 
 
-          <PrivateRoute path="/dashboard" component={Dashboard} />  
+          <PrivateRoute path="/dashboard" component={Dashboard} />      
 
-          <Route path ="/dashboard/savedmaps" render={props => {
+          <PrivateRoute path="/dashboard/profile" component={Profile} />  
+
+          <Route path ="/dashboard/profile" render={props => {
           return <SavedCharts {...props} deleteSavedChart ={deleteSavedChart} savedCharts = {savedCharts} /> }} />
 
           <Route path ="/dashboard/maps" component={InteractiveMap} />         
