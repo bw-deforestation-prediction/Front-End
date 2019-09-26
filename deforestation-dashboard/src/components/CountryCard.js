@@ -8,7 +8,7 @@ import Card from "@material-ui/core/Card";
 import CardContent from "@material-ui/core/CardContent";
 import { makeStyles } from "@material-ui/core/styles";
 import Paper from "@material-ui/core/Paper";
-
+import { Link } from "react-router-dom";
 
 
 function CountryCard(props) {   
@@ -39,7 +39,10 @@ function CountryCard(props) {
   const classes = useStyles();  
 
     return (
-    <Card className = "material-card">
+    
+    
+
+    <Card /*className = "material-card"*/>
       <CardContent>
         <Paper className={classes.root}>
           <Table  className={classes.table}>
@@ -51,7 +54,9 @@ function CountryCard(props) {
                     fontWeight: "bold"                    
                   }}
                 >
-                  {props.name}
+                 
+                   {props.name} 
+
                 </TableCell>
                 {props.yearArray.map(year => {
                   return (
@@ -72,7 +77,7 @@ function CountryCard(props) {
                   >
                     {/***************SAVE BUTTON********************/}
                     
-                    <button onClick = { () => props.saveCharts( props["name"], props.id) }> Save </button>
+                    <button onClick = { () => props.saveCharts( props["name"], props["id"] ) }> Save </button>
 
                   </TableCell>
                   {props.yearArray.map(year => {
@@ -90,6 +95,8 @@ function CountryCard(props) {
         
       </CardContent>
     </Card>
+
+    
   );
 }
 

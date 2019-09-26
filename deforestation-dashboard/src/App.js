@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, {useState, useEffect} from 'react';
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import LoginScreen from './components/LoginScreen';
 import PrivateRoute from './components/PrivateRoute';
@@ -9,12 +9,20 @@ import Navbar from "./components/Navbar";
 import SavedCharts from "./components/SavedCharts.js";
 import MapViewByYear from "./components/MapViewByYear.js";
 import DataByCountry from "./components/DataByCountry.js";
+import CountryCard from "./components/CountryCard.js";
 
 
 function App() {
 
   
-  const [savedCharts, setSavedCharts] = useState( [] );
+  //const [savedCharts, setSavedCharts] = useState( [] );
+  const [savedCharts, setSavedCharts] = useState(localStorage.getItem("savedCharts") ? JSON.parse(localStorage.getItem("savedCharts")) : []);
+
+  useEffect(() => {
+		localStorage.setItem("savedCharts", JSON.stringify(savedCharts));
+
+	}, [savedCharts]); 
+  
 
   const saveCharts = ( nameIn ) => {        
 
@@ -57,7 +65,12 @@ function App() {
           <Route path ="/dashboard/maps" component={MapViewByYear} />         
           
           <Route path ="/dashboard/databycountry" render={props => {
-          return <DataByCountry {...props} saveCharts = {saveCharts} />  }} />    
+          return <DataByCountry {...props} saveCharts = {saveCharts} />  }} /> 
+
+          <Route path="/dashboard/databycountry/:name" render={props => { 
+          return <CountryCard {...props} />
+        }}
+      />   
 
         {/*</Switch>*/}            
                   

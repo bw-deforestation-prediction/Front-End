@@ -60,7 +60,7 @@ function SavedCharts({ savedCharts, deleteSavedChart }) {
 
                 {savedCharts.map((chart, index) => {
 
-                return <SavedCard key = {index} chart={chart} deleteSavedChart = {deleteSavedChart}/>
+                return <SavedCard id = {index} key = {index} chart={chart} deleteSavedChart = {deleteSavedChart}/>
 
                 })}
 
