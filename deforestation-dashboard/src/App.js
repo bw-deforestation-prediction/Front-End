@@ -12,10 +12,8 @@ import DataByCountry from "./components/DataByCountry.js";
 import CountryCard from "./components/CountryCard.js";
 
 
-function App() {
-
+function App() {  
   
-  //const [savedCharts, setSavedCharts] = useState( [] );
   const [savedCharts, setSavedCharts] = useState(localStorage.getItem("savedCharts") ? JSON.parse(localStorage.getItem("savedCharts")) : []);
 
   useEffect(() => {
@@ -47,9 +45,6 @@ function App() {
     <Router>
 
       <div className="App">
-
-        {/*<AppHeader />*/}
-        {/*<Navbar/>*/}
         
         {/* <Switch> */}
        

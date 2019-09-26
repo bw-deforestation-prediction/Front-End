@@ -32,14 +32,17 @@ function DataByCountry(props){
         event.preventDefault();
         setQuery({...query, [event.target.name]: event.target.value});
     }
-
-    //var sel = window.getSelection();
+    
 
     const clickHandler = (event) => {
        event.preventDefault();
        if (window.find(query.search, true)) { 
         document.execCommand("hiliteColor", false, "YellowGreen"); 
-        //sel.collapseToEnd(); 
+        
+      }
+
+      else {
+          alert(`${query.search} was not found. Please try again.`)
       }
 
     }
@@ -62,9 +65,7 @@ function DataByCountry(props){
                 name = "search" 
                 />
                 <button onClick = {clickHandler} type="submit"> Search </button>
-            </form>
-
-                         
+            </form>                     
                 
 
             </div>                 

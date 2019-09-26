@@ -12,8 +12,7 @@ import { Link } from "react-router-dom";
 
 
 function CountryCard(props) {   
-    
-
+  
   const useStyles = makeStyles(theme => ({
     root: {    
       '&:nth-of-type(odd)': {

@@ -11,8 +11,7 @@ import { Grid, Form, Input, TextArea, Button, Select, Modal } from "semantic-ui-
 const Container = styled.div`
     width: 100%;
     display: flex;
-    justify-content: center;    
-    border: 1px solid red;
+    justify-content: center;      
 
 `;
 
@@ -27,8 +26,7 @@ const AppContainer = styled.div`
     box-shadow: 0 -1px 0 #e0e0e0, 0 0 2px rgba(0, 0, 0, 0.12),
     0 2px 4px rgba(0, 0, 0, 0.24);    
     background-size: 100% 100%;
-    background-repeat: no-repeat;
-    border: 1px solid green;
+    background-repeat: no-repeat;   
     
 
 `;
@@ -41,8 +39,7 @@ const FriendsDiv = styled.div`
     align-content: center;
     align-content: space-around;
     width: 100%;
-    height: 500px;   
-    border: 1px solid blue;
+    height: 500px;      
 
 `;
 
