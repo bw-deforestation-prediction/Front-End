@@ -27,7 +27,7 @@ h2, span, img {
     display: flex;
     justify-content: center;
     width: 100%;
-   
+
     .personalInfo{
         text-align:left;
     }

@@ -6,6 +6,7 @@ import { axiosWithAuth } from "../utils/axiosWithAuth";
 import { Route } from "react-router-dom";
 import DashboardHeader from "./DashboardHeader";
 import LoginScreen from "./LoginScreen";
+import Profile from './Profile/Profile';
 
 export default function Dashboard(props) {
   const [user, setUser] = useState({});
@@ -16,10 +17,11 @@ export default function Dashboard(props) {
     <div className="dashboard-container">
       <DashboardHeader />
       <Route path="/LonginScreen" component={LoginScreen} />
+      <Profile />   
       {/* logo and log out button 
             <div className = "navbar">                    
 
-                                        
+                                      
     
             </div>*/}
       {/* <DashboardFooter /> */}
