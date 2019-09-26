@@ -3,6 +3,7 @@ import axios from "axios";
 import {countries} from "../data/data.js";
 import CountryCard from "./CountryCard.js";
 import { Link } from "react-router-dom";
+import DashboardHeader from "./DashboardHeader.js";
 
 function DataByCountry(props){
 
@@ -58,10 +59,10 @@ function DataByCountry(props){
          window.find(text);
     }
 
-    return (
+    return (        
 
-        <div className = "country-view-div">      
-
+        <div className = "country-view-div">    
+       
         <div className = "search-form-div">
 
             <form className = "search-form">

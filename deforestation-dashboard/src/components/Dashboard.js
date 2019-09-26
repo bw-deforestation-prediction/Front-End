@@ -15,17 +15,13 @@ export default function Dashboard(props) {
   return (
     /*main container for the dashboard elements */
     <div className="dashboard-container">
-      <DashboardHeader />
-      <Route path="/LonginScreen" component={LoginScreen} />
-      <Profile />   
-      {/* logo and log out button 
-            <div className = "navbar">                    
 
-                                      
-    
-            </div>*/}
+      <DashboardHeader />
+     
+      {/*<Profile />   */}
+     
       {/* <DashboardFooter /> */}
-      {/* dashboard*/}
+    
     </div>
   );
 }

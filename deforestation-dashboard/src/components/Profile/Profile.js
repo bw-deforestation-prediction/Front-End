@@ -2,6 +2,18 @@ import React, { useEffect, useState } from "react";
 import axios from "axios";
 import styled from "styled-components";
 import avataricon from '../../avataricon.png'
+import { NavLink } from "react-router-dom";
+
+//styled component - main page container
+const Container = styled.div`
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;   
+    align-items: center;
+      
+
+`;
 
 const Card = styled.div `
 
@@ -12,6 +24,7 @@ margin:40px 0;
 background-color: #0A8334;
 border-radius: 5px;
 box-shadow: 0 0 5px #333;
+margin-bottom: 50px;
 
 h3{
     margin-top: 10px;
@@ -83,6 +96,7 @@ function ProfileInfo ({item}) {
     const {id, first_name, last_name, email} = item;
     
     return (
+        <Container>
             <Card>
             <div className="character-list " key={id}>
                 <h2>My Profile</h2>
@@ -96,9 +110,13 @@ function ProfileInfo ({item}) {
             </div>
 
             <div className='mapRequest'>
-                <h3 className='mapRequest'>Would you like to follow the Progress of Specific Countries?</h3>
+                <h3 className='mapRequest'>Save Countries of Interest to see them below.</h3>
             </div>
             </Card>
-            );
+
+            
+        </Container>
+
+        );
     }
 
