@@ -4,8 +4,12 @@ import App from './App';
 import Maps from "./components/Maps.js";
 import * as serviceWorker from './serviceWorker';
 import './styling/index.scss';
+import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 
-ReactDOM.render(<App />, document.getElementById('root'));
+ReactDOM.render(
+<Router>
+<App />
+</Router>, document.getElementById('root'));
 
 
 // If you want your app to work offline and load faster, you can change
