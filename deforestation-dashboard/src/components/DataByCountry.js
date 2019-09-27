@@ -18,7 +18,7 @@ function DataByCountry(props){
     if(countriesArray.length === 0){
         return (
          <div className="loading">
-             <h2>Loading data...</h2>             
+             <h2>Loading...</h2>             
          </div>
         )
      }

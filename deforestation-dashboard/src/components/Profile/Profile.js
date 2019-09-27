@@ -32,7 +32,7 @@ h3{
     filter: drop-shadow(0 0 1px rgba(0,0,0,.5));
 }
 h2, span, img {
-    color: #c96b00;
+    color: #ffa500;
     filter: drop-shadow(0 0 1px rgba(0,0,0,.5));
 }
 
@@ -52,7 +52,6 @@ h2, span, img {
 `;
 
 
-
 export default function Profile (props) {
 
     const [user, setUser] = useState([]);
@@ -64,7 +63,6 @@ export default function Profile (props) {
 
     axios
         .get(`https://deforestation.herokuapp.com/api/users/${id}`)
-
 
         .then(response => {
             console.log('right here', response.data);
@@ -119,4 +117,5 @@ function ProfileInfo ({item}) {
 
         );
     }
+
 

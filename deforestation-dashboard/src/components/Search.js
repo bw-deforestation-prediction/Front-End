@@ -122,7 +122,7 @@ function Search(props){
             console.log("number", number)
 
             console.log("obj number", obj[number])
-            setResults(obj[number])
+            setResults(obj[number]);
 
            
         })
@@ -161,10 +161,7 @@ function Search(props){
 
             </div>           
                    
-                
-           
-
-                
+                    
 
                     <FriendsDiv>                      
                                                                          
@@ -174,17 +171,12 @@ function Search(props){
                             country = {country}
                             forestCoveragePercent = {results}
                             
-                        />   
-                                      
+                        />                                    
                         
 
-                    </FriendsDiv>
-
-                
-     
+                    </FriendsDiv>   
 
             
-
         
         </div>
 
