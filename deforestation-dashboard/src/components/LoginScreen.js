@@ -25,7 +25,7 @@ const LoginScreen = (props) => {
         localStorage.setItem('token', res.data.token);
         console.log("login token data", res);
         localStorage.setItem('userId', res.data.user.id);
-        props.history.push('/dashboard');
+        props.history.push('/dashboard/profile');
       })
       .catch (err => {
         console.log(err);

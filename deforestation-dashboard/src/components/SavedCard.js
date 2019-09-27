@@ -16,12 +16,11 @@ const SavedCard = (props) => {
 
   
   return (    
-        
-
+      
         <Grid.Column padded key={props.id}>
         <Card>
         <Card.Content>
-            <Card.Header> <Icon className = "edit-icon" name="edit outline" /> {props.chart} <Icon onClick = {deleteHandler} className = "delete-icon" name="delete" /></Card.Header>
+            <Card.Header> {props.chart} <Icon onClick = {deleteHandler} className = "delete-icon" name="delete" /></Card.Header>
             <Card.Description> </Card.Description>
         </Card.Content>
         </Card>

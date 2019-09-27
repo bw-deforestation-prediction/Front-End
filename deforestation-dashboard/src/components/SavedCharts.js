@@ -34,12 +34,11 @@ const AppContainer = styled.div`
 const FriendsDiv = styled.div`
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
-    justify-content: space-around;
-    align-content: center;
-    align-content: space-around;
+    justify-content: flex-start;    
+    align-content: flex-start;    
     width: 100%;
-    height: 500px;      
+    height: 500px;   
+    
 
 `;
 

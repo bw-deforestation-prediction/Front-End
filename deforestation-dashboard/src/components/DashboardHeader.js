@@ -85,8 +85,13 @@ const DashboardHeader = () => {
 
         <NavLink className="nav-links" to="/dashboard/databycountry">
         <img src={treeiconwhite} />
-          Data By Country
-        </NavLink>          
+          Country Data
+        </NavLink>    
+
+        <NavLink className="nav-links" to="/dashboard/search">
+        <img src={treeiconwhite} />
+         Yearly Data
+        </NavLink>         
         
         <NavLink to="/"><img src={treeiconwhite} />Log Out</NavLink>
 

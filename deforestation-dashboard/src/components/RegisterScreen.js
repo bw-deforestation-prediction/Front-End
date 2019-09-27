@@ -49,7 +49,7 @@ const RegisterScreen = (props) => {
           .then(res => {
             localStorage.setItem('token', res.data.token);   
             console.log("login token data", res);         
-            props.history.push('/dashboard');
+            props.history.push('/dashboard/profile');
           })
           .catch(err => {
             console.log(err.response);
