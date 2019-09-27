@@ -1,11 +1,12 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import SavedCard from "./SavedCard.js";
-
 import 'semantic-ui-css/semantic.css'; 
 import 'semantic-ui-css/semantic.min.css'; 
 import styled from 'styled-components';
 import { Grid, Form, Input, TextArea, Button, Select, Modal } from "semantic-ui-react";
+import { useContext } from "react";
+import { SavedChartsContext } from "../contexts/SavedChartsContext.js";
 
 //styled component - main page container
 const Container = styled.div`
@@ -42,9 +43,11 @@ const FriendsDiv = styled.div`
 
 `;
 
-function SavedCharts({ savedCharts, deleteSavedChart }) {
+function SavedCharts() {
 
-    console.log("saved charts props", savedCharts);
+    
+
+    const { savedCharts, deleteSavedChart } = useContext(SavedChartsContext);
 
     return (
 

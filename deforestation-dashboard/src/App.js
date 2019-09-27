@@ -13,6 +13,7 @@ import CountryCard from "./components/CountryCard.js";
 import InteractiveMap from "./components/InteractiveMap.js";
 import Profile from "./components/Profile/Profile.js";
 import Search from "./components/Search.js";
+import { SavedChartsContext } from "./contexts/SavedChartsContext.js";
 
 
 
@@ -51,6 +52,8 @@ function App() {
       <div className="App">
         
         {/* <Switch> */}
+
+        <SavedChartsContext.Provider value = {{ deleteSavedChart, savedCharts}}>
       
           <Route exact path="/" component={LoginScreen} />
 
@@ -59,11 +62,8 @@ function App() {
           <PrivateRoute path="/dashboard" component={Dashboard} />      
 
           <Route path="/dashboard/profile" component={Profile} /> 
-
-          <Route path ="/dashboard/profile" render={props => {
-          return <SavedCharts {...props} deleteSavedChart ={deleteSavedChart} savedCharts = {savedCharts} /> }} />
-
-                
+          
+          <Route path ="/dashboard/profile" component = {SavedCharts} />                        
           
           <Route path ="/dashboard/databycountry" render={props => {
           return <DataByCountry {...props} saveCharts = {saveCharts} />  }} /> 
@@ -71,7 +71,9 @@ function App() {
           <Route path ="/dashboard/search" render={props => {
           return <Search {...props} />  }} /> 
 
-          <Route path ="/dashboard/search" component={MapViewByYear} />          
+          <Route path ="/dashboard/search" component={MapViewByYear} />  
+
+        </SavedChartsContext.Provider>         
         
 
         {/*</Switch>*/}            
