@@ -1,39 +1,17 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 
-class Maps extends React.Component {
 
-  constructor(props){
-    super(props);
-    
-    
+function Maps(props) {
 
-  }
+  //console.log("maps props", year);
+  const { year } = props;
 
-  render(){
-    return(
-
-      <div class = "maps-div">
-
-        <img className="prediction-map" src={require(`../maps/forest_coverage_${this.props.year}.png`)} width= "1000px" height = "auto"/>
-
-      </div>
-
-
-    );
-
-  }
-
-}
-
-export default Maps;
-
-/*function Maps({year}) {
-
+  console.log("maps props", year);
   
   return(
 
-    <div class = "maps-div">
+    <div class = "maps-div">     
 
       <img className="prediction-map" src={require(`../maps/forest_coverage_${year}.png`)} width= "1000px" height = "auto"/>
 
@@ -45,7 +23,7 @@ export default Maps;
 }
 
 
-export default Maps;*/
+export default Maps;
 
 
 

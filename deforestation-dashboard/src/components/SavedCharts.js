@@ -5,8 +5,7 @@ import 'semantic-ui-css/semantic.css';
 import 'semantic-ui-css/semantic.min.css'; 
 import styled from 'styled-components';
 import { Grid, Form, Input, TextArea, Button, Select, Modal } from "semantic-ui-react";
-import { useContext } from "react";
-import { SavedChartsContext } from "../contexts/SavedChartsContext.js";
+
 
 //styled component - main page container
 const Container = styled.div`
@@ -43,11 +42,9 @@ const FriendsDiv = styled.div`
 
 `;
 
-function SavedCharts() {
+function SavedCharts({ savedCharts, deleteSavedChart }) {
 
-    
-
-    const { savedCharts, deleteSavedChart } = useContext(SavedChartsContext);
+    console.log("saved charts props", savedCharts);
 
     return (
 
