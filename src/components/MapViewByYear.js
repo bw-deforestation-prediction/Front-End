@@ -10,13 +10,13 @@ function MapViewByYear(){
     const years = [2019, 2020, 2021, 2022, 2023, 2024, 2025, 2026];
 
     const changeHandler = (event) => {
-
+        event.preventDefault();
         setYear(event.target.value);
     }
 
     const clickHandler = (event) => {
-
-        setYear(event.target.value);
+        event.preventDefault();
+        setYear(year);
     }
 
     return (
@@ -27,10 +27,11 @@ function MapViewByYear(){
                         
                 <form className = "search-form">  
                 
-                    <select className = "select-year" onChange={changeHandler}>
+                    <select className = "select-years" onChange={changeHandler}>
 
                         {years.map(year => {
                             return <option key={year} year={year}>{year}</option>
+                            console.log("year in maps", year)
                         })}
 
                     </select>

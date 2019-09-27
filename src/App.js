@@ -61,9 +61,7 @@ function App() {
           <Route path="/dashboard/profile" component={Profile} /> 
 
           <Route path ="/dashboard/profile" render={props => {
-          return <SavedCharts {...props} deleteSavedChart ={deleteSavedChart} savedCharts = {savedCharts} /> }} />
-
-                
+          return <SavedCharts {...props} deleteSavedChart ={deleteSavedChart} savedCharts = {savedCharts} /> }} />                
           
           <Route path ="/dashboard/databycountry" render={props => {
           return <DataByCountry {...props} saveCharts = {saveCharts} />  }} /> 
