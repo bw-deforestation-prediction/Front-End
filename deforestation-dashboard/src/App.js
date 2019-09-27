@@ -12,6 +12,8 @@ import DataByCountry from "./components/DataByCountry.js";
 import CountryCard from "./components/CountryCard.js";
 import InteractiveMap from "./components/InteractiveMap.js";
 import Profile from "./components/Profile/Profile.js";
+import Search from "./components/Search.js";
+
 
 
 function App() {  
@@ -66,10 +68,11 @@ function App() {
           <Route path ="/dashboard/databycountry" render={props => {
           return <DataByCountry {...props} saveCharts = {saveCharts} />  }} /> 
 
-          <Route path="/dashboard/databycountry/:name" render={props => { 
-          return <CountryCard {...props} />
-        }}
-      />   
+          <Route path ="/dashboard/search" render={props => {
+          return <Search {...props} />  }} /> 
+
+        
+        
 
         {/*</Switch>*/}            
                   
