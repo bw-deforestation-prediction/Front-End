@@ -1,8 +1,18 @@
-.delete-icon {
-    position: absolute;
-    padding: 3px;
-    right: 5px;
-    top: 5px;
-    cursor: pointer;
-    
- }
+.forest-card-grid {
+      
+
+    .forest-card {
+        width: auto;
+        background-color: #0a8334;
+       
+        .card-header {
+            font-size: 3rem;
+            
+        }
+
+        .card-desc {
+            font-size: 1.5rem;
+        }
+        
+    }
+}

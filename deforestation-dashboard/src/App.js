@@ -63,7 +63,7 @@ function App() {
           <Route path ="/dashboard/profile" render={props => {
           return <SavedCharts {...props} deleteSavedChart ={deleteSavedChart} savedCharts = {savedCharts} /> }} />
 
-          <Route path ="/dashboard/maps" component={InteractiveMap} />         
+                
           
           <Route path ="/dashboard/databycountry" render={props => {
           return <DataByCountry {...props} saveCharts = {saveCharts} />  }} /> 
@@ -71,7 +71,7 @@ function App() {
           <Route path ="/dashboard/search" render={props => {
           return <Search {...props} />  }} /> 
 
-        
+          <Route path ="/dashboard/search" component={MapViewByYear} />          
         
 
         {/*</Switch>*/}            

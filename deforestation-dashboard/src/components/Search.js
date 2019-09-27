@@ -10,40 +10,17 @@ import 'semantic-ui-css/semantic.min.css';
 import styled from 'styled-components';
 import { Grid, Form, Input, TextArea, Button, Select, Modal } from "semantic-ui-react";
 
-//styled component - main page container
-const Container = styled.div`
-    width: 100%;
-    display: flex;
-    justify-content: center;    
-    
 
-`;
-
-//styled component - div containing the main heading and the cards
-const AppContainer = styled.div`
-    width: 80%;
-    height: auto;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;    
-    box-shadow: 0 -1px 0 #e0e0e0, 0 0 2px rgba(0, 0, 0, 0.12),
-    0 2px 4px rgba(0, 0, 0, 0.24);    
-    background-size: 100% 100%;
-    background-repeat: no-repeat;   
-    
-    
-
-`;
 
 const FriendsDiv = styled.div`
+    margin: 0 auto;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;    
     align-content: flex-start;
     margin-top: 25px;
     width: 100%;
-    height: 500px;    
+    height: auto;       
      
 
 `;
@@ -160,9 +137,7 @@ function Search(props){
        
             <div className = "search-form-div">
 
-                <form className = "search-form">
-
-                    
+                <form className = "search-form">                    
                         
                         <select className = "select-country" onChange={countryHandler}>
 
@@ -170,9 +145,7 @@ function Search(props){
                                 return <option key={country} country={country}> {country} </option>
                             })}
 
-                        </select>
-
-                                     
+                        </select>                                     
                         
                         <select className = "select-year" onChange={yearHandler}>
 
@@ -180,9 +153,7 @@ function Search(props){
                                 return <option key={year} year={year}> {year} </option>
                             })}
 
-                        </select>
-
-                    
+                        </select>                    
 
                     <button className = "search-form-button" onClick = {clickHandler} type="submit"> Search </button>
 
@@ -191,9 +162,9 @@ function Search(props){
             </div>           
                    
                 
-            <Container>
+           
 
-                <AppContainer>
+                
 
                     <FriendsDiv>                      
                                                                          
@@ -209,10 +180,10 @@ function Search(props){
 
                     </FriendsDiv>
 
-                </AppContainer>
+                
      
 
-            </Container>  
+            
 
         
         </div>

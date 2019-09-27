@@ -6,14 +6,13 @@ function Maps({year}) {
   
   return(
 
-      <div id = "here">
-        
-        maps
+    <div class = "maps-div">
 
-      </div>
-  ); 
+      <img className="prediction-map" src={require(`../maps/forest_coverage_${year}.png`)} width= "1000px" height = "auto"/>
 
- 
+    </div>
+    
+  );  
 
   
 }
