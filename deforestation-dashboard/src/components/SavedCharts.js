@@ -1,11 +1,11 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import SavedCard from "./SavedCard.js";
-
 import 'semantic-ui-css/semantic.css'; 
 import 'semantic-ui-css/semantic.min.css'; 
 import styled from 'styled-components';
 import { Grid, Form, Input, TextArea, Button, Select, Modal } from "semantic-ui-react";
+
 
 //styled component - main page container
 const Container = styled.div`
