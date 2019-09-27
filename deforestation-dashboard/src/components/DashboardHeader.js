@@ -4,8 +4,6 @@ import styled from "styled-components";
 import treeiconwhite from "../treeiconwhite.png";
 
 const NavBar = styled.div`
-
-
 display: flex;
 width: 100%;
 justify-content: space-between;
@@ -25,8 +23,6 @@ box-shadow: 0 0 3px #333;
   height: 65px;
   padding-bottom: 5px;
 }
-
-
 
 
   img {
@@ -83,7 +79,7 @@ a{
 }
 a:hover {
   
-  color: #c96b00;
+  color: #ffa500;;
 }
 img{
   width:15px;
@@ -98,7 +94,9 @@ img{
 
 `;
 
-const HeaderText = styled.h1``;
+const HeaderText = styled.h1`
+  color:#ffa500;
+`;
 
 const DashboardHeader = () => {
   return (
@@ -110,11 +108,7 @@ const DashboardHeader = () => {
         </HeaderText>
       </div>
       <Links>
-        <a className="nav-links" href="https://deforectationui.herokuapp.com/#">
-          <img src={treeiconwhite} />
-          Home
-        </a>
-
+        
         <a
           className="nav-links"
           href="https://deforectationui.herokuapp.com/about.html"
@@ -135,7 +129,7 @@ const DashboardHeader = () => {
 
         <NavLink className="nav-links" to="/dashboard/search">
         <img src={treeiconwhite} />
-         Yearly Data
+         Predictions
         </NavLink>         
         
         <NavLink to="/">

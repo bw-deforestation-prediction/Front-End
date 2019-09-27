@@ -13,7 +13,15 @@ function DataByCountry(props){
     useEffect( () => {
         setCountriesArray(countries);
 
-    }, []);        
+    }, []);   
+    
+    if(countriesArray.length === 0){
+        return (
+         <div className="loading">
+             <h2>Loading data...</h2>             
+         </div>
+        )
+     }
        
     
     let countryArray = [];
