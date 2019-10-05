@@ -60,16 +60,12 @@ function Search(props){
     for (const prop in unfilteredCountriesArray) {
         countriesArray.push(unfilteredCountriesArray[prop]);
     } 
-        
-    
-
+       
     console.log("filtered countries array", countriesArray); 
-
     
     const countryHandler = (event) => {
         event.preventDefault();
-        setCountry(event.target.value);
-        
+        setCountry(event.target.value);        
     }
 
     useEffect( () => {

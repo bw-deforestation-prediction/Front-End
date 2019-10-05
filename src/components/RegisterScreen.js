@@ -44,7 +44,6 @@ const RegisterScreen = (props) => {
     e.preventDefault();
     axios.post('https://deforestation.herokuapp.com/api/users/register', newUserInfo)    
       .then(res => { 
-
         localStorage.setItem('userId', res.data.id);
         console.log("registered response", res.data.id);
         console.log("registered response id", res.data.id);

@@ -8,10 +8,11 @@ import DashboardHeader from "./DashboardHeader.js";
 
 function DataByCountry(props){
 
-    const [countriesArray, setCountriesArray] = useState([]);    
+    const [countriesArray, setCountriesArray] = useState([]);  
+    const [country, setCountry] = useState("Afghanistan"); 
+     
     const [query, setQuery] = useState({search: ""});
-    const findFlag = false;//used to indicate when the searched for value has been found
-
+    
     useEffect( () => {
         setCountriesArray(countries);
 
@@ -41,27 +42,21 @@ function DataByCountry(props){
     const innerCountryArray = (arrayIn) => {
         return Object.entries(arrayIn).filter((subArray) => subArray[0] === "Country");
     }
-
-    //capitalize the first letter of the search string
-    const capitalize = (str) => {
-
-        return str.charAt(0).toUpperCase() + str.slice(1);
-        
-    }
     
-    const changeHandler = (event) => {
+    //each time a country is selected in the drop down list
+    const countryHandler = (event) => {
         event.preventDefault();
-        setQuery({...query, [event.target.name]: event.target.value});
-    }
-    
+        setCountry(event.target.value);        
+    }   
+       
 
     const clickHandler = (event) => {
        event.preventDefault();
       
-       const queryValue = query.search;
-       //capitalize(queryValue);
-       if (window.find(capitalize(queryValue), true)) { 
-        document.execCommand("hiliteColor", false, "YellowGreen");         
+       const queryValue = country;
+       
+       if (window.find(queryValue, true)) { 
+        document.execCommand("hiliteColor", false, "YellowGreen");    
         
       }
 
@@ -69,36 +64,45 @@ function DataByCountry(props){
           alert(`${query.search} was not found. Please try again.`)
       }
 
-    }
+    }        
 
     function findText(text) {
          window.find(text);
     }
+  
 
     return (        
 
         <div className = "country-view-div">    
        
-        <div className = "search-form-div">
+            <div className = "search-form-div">
 
-            <form className = "search-form">
-                <input type = "text"
-                onChange = {changeHandler}                
-                placeholder = "Country Search..." 
-                value={query.search}
-                name = "search" 
-                />
-                <button className = "search-form-button" onClick = {clickHandler} type="submit"> Search </button>
-            </form>  
+                <form className = "search-form">                 
+           
+                            
+                    <select className = "select-country" onChange={countryHandler}>
 
-        </div>                   
-                
+                        {countriesArray.map((country, index) => {
+                            countryArray = innerCountryArray(country);
+                            return <option key={country.Country} country={country.Country}> {country.Country} </option>
+                        
+
+                        })}
+
+                    </select>                       
+                            
+
+                    <button className = "search-form-button" onClick = {clickHandler} type="submit"> Search </button>
+
+                </form>
+
+            </div>             
 
                         
             
             {countriesArray.map((country, index) => {
                 const yearArray = innerArray(country);   
-                countryArray = innerCountryArray(country);
+                countryArray = innerCountryArray(country);                
                
                 console.log("inner names array", countryArray);           
 

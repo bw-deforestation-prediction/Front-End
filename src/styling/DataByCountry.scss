@@ -9,7 +9,7 @@
     //align-items: center;
     //width: 100%;
     height: auto;   
-    //border: 1px solid red;
+   
 
     @media (max-width: 800px) {
       width: 100%;
@@ -37,47 +37,49 @@
         @media (max-width: 500px) {
           width: 100%;
           height: auto;
-        }  
-      
-    }
+        }       
+          
 
-    .search-form {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        width: 60%;
-        height: 20%;
+      .search-form {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          width: 40%;
+          height: 100%;
+          //border: 1px solid red;
+          
+          @media (max-width: 800px) {
+            width: 100%;
+            height: auto;
+          }
         
-        @media (max-width: 800px) {
-          width: 100%;
-          height: auto;
-        }
+          @media (max-width: 500px) {
+            width: 100%;
+            height: auto;
+          }         
       
-        @media (max-width: 500px) {
-          width: 100%;
-          height: auto;
-        }  
-      
-        
-      }
-      
-      .search-form input {
-        width: 40%;
-        height: 30px;
-        margin-right: 10px;
-       
-      }      
+          .select-country{
+            width: 50%;
+            height: 30px;
+            margin-right: 10px;
+           
+          }    
      
 
-      .search-form-button {    
-        width: 15%;
-        background-color: #4caf50;   
-        height: 30px;         
-      }
-      button:hover {
-        background-color: dodgerblue;
-        color: white;
-      }
+          .search-form-button {    
+            width: 20%;
+            background-color: #4caf50;   
+            height: 30px;         
+          }
+    
+          button:hover {
+            background-color: dodgerblue;
+            color: white;
+          }
+
+    }
+
+  }
 
 }
 

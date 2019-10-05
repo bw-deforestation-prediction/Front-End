@@ -3,6 +3,7 @@ import axios from "axios";
 import styled from "styled-components";
 import avataricon from '../../avataricon.png'
 import { NavLink } from "react-router-dom";
+import { axiosWithAuth } from '../../utils/axiosWithAuth';
 
 //styled component - main page container
 const Container = styled.div`
@@ -57,15 +58,16 @@ export default function Profile (props) {
     const [user, setUser] = useState([]);
     // const [activeID] = useState(localStorage.userID);
 
-    useEffect(() => {
-
     const id = localStorage.getItem('userId');
+
+    useEffect(() => {    
 
     axios
         .get(`https://deforestation.herokuapp.com/api/users/${id}`)
 
         .then(response => {
             console.log('right here', response.data);
+            console.log("right here id", id);
             setUser(response.data);
         })
 
@@ -73,11 +75,12 @@ export default function Profile (props) {
             console.log('User data was not returned', error);
         });
 
-    }, []);
+    }, [id]);
+       
 
     return (
         <section  className ='trial'>
-            {console.log('map', user)}
+            {console.log('profile user info map', user)}
             {user ? user.map (item => (
                 <ProfileInfo key={item.id} item={item} />
             )):
@@ -101,7 +104,7 @@ function ProfileInfo ({item}) {
                 <div className='info-container'>
                     <img src={avataricon} />
                 <div>
-                <h3 className="personalInfo">Name: <span>{first_name}</span></h3>
+                <h3 className="personalInfo">First Name: <span>{first_name}</span></h3>
                 <h3 className="personalInfo">Last Name: <span>{last_name}</span></h3>
                 <h3 className="personalInfo">Email: <span>{email}</span></h3>
                 </div></div>
