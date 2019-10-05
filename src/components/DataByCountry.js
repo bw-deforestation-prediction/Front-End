@@ -56,10 +56,8 @@ function DataByCountry(props){
        const queryValue = country;
        
        if (window.find(queryValue, true)) { 
-        document.execCommand("hiliteColor", false, "YellowGreen");    
-        
-      }
-
+        document.execCommand("hiliteColor", false, "YellowGreen");          
+       }
       else {
           alert(`${query.search} was not found. Please try again.`)
       }
