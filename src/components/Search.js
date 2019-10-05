@@ -4,7 +4,7 @@ import CountryCard from "./CountryCard.js";
 import { Link } from "react-router-dom";
 import DashboardHeader from "./DashboardHeader.js";
 import SearchCard from "./SearchCard.js";
-
+import { CircleSpinner } from "react-spinners-kit";
 import 'semantic-ui-css/semantic.css'; 
 import 'semantic-ui-css/semantic.min.css'; 
 import styled from 'styled-components';
@@ -20,7 +20,8 @@ const FriendsDiv = styled.div`
     align-content: flex-start;
     margin-top: 25px;
     width: 100%;
-    height: auto;       
+    height: auto;    
+    margin-bottom: 20px;  
      
 
 `;
@@ -42,7 +43,8 @@ function Search(props){
     let resultsString = "";
 
     let test;
-       
+
+    
 
     useEffect( () => {
         axios.get("https://ftable-server.herokuapp.com/countries")
@@ -53,21 +55,17 @@ function Search(props){
 
     }, [])   
 
-          
+             
 
     for (const prop in unfilteredCountriesArray) {
         countriesArray.push(unfilteredCountriesArray[prop]);
     } 
-        
-    
-
+       
     console.log("filtered countries array", countriesArray); 
-
     
     const countryHandler = (event) => {
         event.preventDefault();
-        setCountry(event.target.value);
-        
+        setCountry(event.target.value);        
     }
 
     useEffect( () => {
@@ -78,6 +76,20 @@ function Search(props){
         })
 
     }, [])   
+
+    //display circle spinner while data is loading
+    if(countriesArray.length === 0){
+        return (
+         <div className="loading">
+             
+             <CircleSpinner size={50} color="#f3bb01" />   
+                     
+         </div>
+
+         
+        )
+    }
+       
 
     for (const prop in unfilteredYearsArray) {
         yearsArray.push(unfilteredYearsArray[prop]);

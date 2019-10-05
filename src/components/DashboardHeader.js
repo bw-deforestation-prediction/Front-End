@@ -111,7 +111,7 @@ const DashboardHeader = () => {
         
         <a
           className="nav-links"
-          href="https://deforectationui.herokuapp.com/about.html"
+          href="https://deforectationui.herokuapp.com/about.html" target = "_blank"
         >
           <img src={treeiconwhite} />
           About
