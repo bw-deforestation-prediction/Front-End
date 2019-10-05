@@ -3,23 +3,30 @@ import axios from "axios";
 import {countries} from "../data/data.js";
 import CountryCard from "./CountryCard.js";
 import { Link } from "react-router-dom";
+import { CircleSpinner } from "react-spinners-kit";
 import DashboardHeader from "./DashboardHeader.js";
 
 function DataByCountry(props){
 
     const [countriesArray, setCountriesArray] = useState([]);    
     const [query, setQuery] = useState({search: ""});
+    const findFlag = false;//used to indicate when the searched for value has been found
 
     useEffect( () => {
         setCountriesArray(countries);
 
     }, []);   
     
+    //spinner while page is loading
     if(countriesArray.length === 0){
         return (
          <div className="loading">
-             <h2>Loading...</h2>             
+             
+             <CircleSpinner size={50} color="#f3bb01" />   
+                     
          </div>
+
+         
         )
      }
        
@@ -50,10 +57,11 @@ function DataByCountry(props){
 
     const clickHandler = (event) => {
        event.preventDefault();
+      
        const queryValue = query.search;
        //capitalize(queryValue);
        if (window.find(capitalize(queryValue), true)) { 
-        document.execCommand("hiliteColor", false, "YellowGreen"); 
+        document.execCommand("hiliteColor", false, "YellowGreen");         
         
       }
 
@@ -75,7 +83,7 @@ function DataByCountry(props){
 
             <form className = "search-form">
                 <input type = "text"
-                onChange = {changeHandler}
+                onChange = {changeHandler}                
                 placeholder = "Country Search..." 
                 value={query.search}
                 name = "search" 

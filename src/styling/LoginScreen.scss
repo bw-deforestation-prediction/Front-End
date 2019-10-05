@@ -25,6 +25,14 @@
     //background: #2eb497;
     background: white;
     padding: 2%;
+    padding: 1% 2%;
+    margin: 0 0 4% 0;
+    
+
+    &:hover {
+      outline: none !important;      
+      box-shadow:3px 3px 3px 3px rgba(0, 0, 0, 0.507);
+     }
        
 
     @media (max-width: 800px) {
@@ -44,7 +52,8 @@
       font-size: 3rem;
       margin: 0;
       margin: 10px auto;
-    }
+    }   
+    
 
     .login-form {
       display: flex;
@@ -53,6 +62,7 @@
       width: 80%;
       margin: 3% auto;
       height: 30vh;
+      
      
       @media (max-width: 800px) {
         width: 100%;
@@ -64,6 +74,7 @@
         height: auto;
       }
   
+     
 
       input {
         width: 70%;
@@ -112,6 +123,8 @@
         }
 
       }
+
+    
 
     } // login-form
 

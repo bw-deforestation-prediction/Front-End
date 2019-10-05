@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import axios from 'axios';
 import useDarkMode from "../utils/hook";
+import Loader from 'react-loader-spinner';
 
 const Navbar = () => {
   const [darkMode, setDarkMode] = useDarkMode();
@@ -42,13 +43,28 @@ const RegisterScreen = (props) => {
   const handleSubmit = (e) => {
     e.preventDefault();
     axios.post('https://deforestation.herokuapp.com/api/users/register', newUserInfo)    
-      .then(res => {
+      .then(res => { 
+
         localStorage.setItem('userId', res.data.id);
-        console.log("registered response", res);
+        console.log("registered response", res.data.id);
+        console.log("registered response id", res.data.id);
+
+        /*if(res === null){
+          return (
+          //  <div className="loading">
+               //<h2>Loading...</h2>             
+           //</div>
+  
+           <Loader type='Puff' color='#05ce78' height={120} width={120}/>
+          )
+       }*/
+         
         axios.post('https://deforestation.herokuapp.com/api/users/login', {email: newUserInfo.email, password: newUserInfo.password})
           .then(res => {
             localStorage.setItem('token', res.data.token);   
-            console.log("login token data", res);         
+            console.log("login token data", res.data.user); 
+            console.log("login token data id", res.data.user.id);    
+            localStorage.setItem('userId', res.data.user.id);     
             props.history.push('/dashboard/profile');
           })
           .catch(err => {

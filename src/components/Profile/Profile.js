@@ -108,7 +108,7 @@ function ProfileInfo ({item}) {
             </div>
 
             <div className='mapRequest'>
-                <h3 className='mapRequest'>Save Countries of Interest to see them below.</h3>
+                {/*<h3 className='mapRequest'>Save Countries of Interest to see them below.</h3>*/}
             </div>
             </Card>
 

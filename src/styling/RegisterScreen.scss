@@ -15,9 +15,7 @@
   @media (max-width: 500px) {
     width: 100%;
     height: auto;
-  }  
-
-  
+  }   
 
   .register-form-container {
     width: 40vw;   
@@ -26,6 +24,11 @@
     border-radius: 5px;
     background: white;
     padding: 2%;
+
+    &:hover {
+      outline: none !important;      
+      box-shadow:3px 3px 3px 3px rgba(0, 0, 0, 0.507);
+     }
     
 
     @media (max-width: 800px) {

@@ -63,7 +63,7 @@ function App() {
 
           <Route path="/dashboard/profile" component={Profile} /> 
 
-          <Route path ="/dashboard/profile" component = {SavedCharts} />                  
+          {/*<Route path ="/dashboard/profile" component = {SavedCharts} /> */}                 
           
           <Route path ="/dashboard/databycountry" render={props => {
           return <DataByCountry {...props} saveCharts = {saveCharts} />  }} /> 
@@ -72,6 +72,8 @@ function App() {
           return <Search {...props} />  }} /> 
 
           <Route path ="/dashboard/search" component={MapViewByYear} />   
+
+          
 
         </SavedChartsContext.Provider>       
         

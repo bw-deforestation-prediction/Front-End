@@ -76,7 +76,7 @@ function CountryCard(props) {
                   >
                     {/***************SAVE BUTTON********************/}
                     
-                    <button onClick = { () => props.saveCharts( props["name"], props["id"] ) }> Save </button>
+                    {/*<button onClick = { () => props.saveCharts( props["name"], props["id"] ) }> Save </button>*/}
 
                   </TableCell>
                   {props.yearArray.map(year => {

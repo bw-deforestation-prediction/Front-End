@@ -1,6 +1,6 @@
 import React, {useState, useEffect} from "react";
 import axios from "axios";
-
+import InteractiveMap from "./InteractiveMap.js";
 import Maps from "./Maps.js";
 
 function MapViewByYear(){
@@ -19,9 +19,17 @@ function MapViewByYear(){
         setYear(year);
     }
 
-    return (
+    return (      
 
-        <div className = "map-view-div">
+        <InteractiveMap />
+
+    );
+
+}
+
+export default MapViewByYear;
+
+ {/*<div className = "map-view-div">
 
             <div className = "search-form-div">
                         
@@ -43,12 +51,7 @@ function MapViewByYear(){
             </div>
 
             <Maps year={year}/>
+            
 
-        </div>
-
-    );
-
-}
-
-export default MapViewByYear;
+        </div>*/}
 
