@@ -1,21 +1,29 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import Iframe from "react-iframe";
+//import firstMap from "./firstMap.html";
 
-function InteractiveMap(){
+function InteracticeMap(){
 
     return (
-        <Iframe url="https://deforestation-prediction-map.netlify.com/"        
-        id="myId"
-        className="interactive-map"
-        display="initial"
-        />
+        <div>
+            
+        </div>
 
 
     );
 
-    
+    /*var htmlContent = require("./firstMap.html");
+
+    return (
+        <div dangerouslySetInnerHTML={ {__html: htmlContent} } />
+    );*/
+
+    /*ReactDOM.render(
+        <div dangerouslySetInnerHTML={ firstmap } />, 
+        document.getElementById("test")
+    );*/
+
 
 }
 
-export default InteractiveMap;
+export default InteracticeMap;

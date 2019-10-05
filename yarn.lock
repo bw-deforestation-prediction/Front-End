@@ -6333,7 +6333,11 @@ html-webpack-plugin@4.0.0-beta.5:
     tapable "^1.1.0"
     util.promisify "1.0.0"
 
+<<<<<<< HEAD
 htmlparser2@^3.3.0, htmlparser2@^3.9.0:
+=======
+htmlparser2@^3.3.0:
+>>>>>>> 5c2c749970e404fcc85ee945ac2a33e80be595ef
   version "3.10.1"
   resolved "https://registry.yarnpkg.com/htmlparser2/-/htmlparser2-3.10.1.tgz#bd679dc3f59897b6a34bb10749c855bb53a9392f"
   integrity sha512-IgieNijUMbkDovyoKObU1DUhm1iwNYE/fuifEoEHfd1oZKZDaONBSkal7Y01shxsM49R4XaMdGez3WnF9UfiCQ==
@@ -9675,11 +9679,14 @@ point-in-big-polygon@^2.0.0:
     robust-orientation "^1.1.3"
     slab-decomposition "^1.0.1"
 
+<<<<<<< HEAD
 polished@^1.9.3:
   version "1.9.3"
   resolved "https://registry.yarnpkg.com/polished/-/polished-1.9.3.tgz#d61b8a0c4624efe31e2583ff24a358932b6b75e1"
   integrity sha512-4NmSD7fMFlM8roNxs7YXPv7UFRbYzb0gufR5zBxJLRzY54+zFsavxBo6zsQzP9ep6Hh3pC2pTyrpSTBEaB6IkQ==
 
+=======
+>>>>>>> 5c2c749970e404fcc85ee945ac2a33e80be595ef
 polybooljs@^1.2.0:
   version "1.2.0"
   resolved "https://registry.yarnpkg.com/polybooljs/-/polybooljs-1.2.0.tgz#b4390c2e079d4c262d3b2504c6288d95ba7a4758"
@@ -10710,6 +10717,7 @@ react-dev-utils@^9.0.4:
     strip-ansi "5.2.0"
     text-table "0.2.0"
 
+<<<<<<< HEAD
 react-dom@^16.5.1:
   version "16.10.0"
   resolved "https://registry.yarnpkg.com/react-dom/-/react-dom-16.10.0.tgz#319356767b5c044f3c016eef28518ef7726dce84"
@@ -10720,6 +10728,8 @@ react-dom@^16.5.1:
     prop-types "^15.6.2"
     scheduler "^0.16.0"
 
+=======
+>>>>>>> 5c2c749970e404fcc85ee945ac2a33e80be595ef
 react-dom@^16.9.0:
   version "16.9.0"
   resolved "https://registry.yarnpkg.com/react-dom/-/react-dom-16.9.0.tgz#5e65527a5e26f22ae3701131bcccaee9fb0d3962"
@@ -10735,6 +10745,7 @@ react-error-overlay@^6.0.2:
   resolved "https://registry.yarnpkg.com/react-error-overlay/-/react-error-overlay-6.0.2.tgz#642bd6157c6a4b6e9ca4a816f7ed30b868c47f81"
   integrity sha512-DHRuRk3K4Lg9obI6J4Y+nKvtwjasYRU9CFL3ud42x9YJG1HbQjSNublapC/WBJOA726gNUbqbj0U2df9+uzspQ==
 
+<<<<<<< HEAD
 react-html-parser@^2.0.2:
   version "2.0.2"
   resolved "https://registry.yarnpkg.com/react-html-parser/-/react-html-parser-2.0.2.tgz#6dbe1ddd2cebc1b34ca15215158021db5fc5685e"
@@ -10749,11 +10760,14 @@ react-iframe@^1.8.0:
   dependencies:
     object-assign "^4.1.1"
 
+=======
+>>>>>>> 5c2c749970e404fcc85ee945ac2a33e80be595ef
 react-is@^16.6.0, react-is@^16.6.3, react-is@^16.7.0, react-is@^16.8.1, react-is@^16.8.4, react-is@^16.8.6:
   version "16.9.0"
   resolved "https://registry.yarnpkg.com/react-is/-/react-is-16.9.0.tgz#21ca9561399aad0ff1a7701c01683e8ca981edcb"
   integrity sha512-tJBzzzIgnnRfEm046qRcURvwQnZVXmuCbscxUO5RWrGTXpon2d4c8mI0D8WE6ydVIm29JiLB6+RslkIvym9Rjw==
 
+<<<<<<< HEAD
 react-loader-spinner@^3.1.4:
   version "3.1.4"
   resolved "https://registry.yarnpkg.com/react-loader-spinner/-/react-loader-spinner-3.1.4.tgz#03ef24252f6802d6e85443c23b32c2e66973fe4d"
@@ -10762,6 +10776,8 @@ react-loader-spinner@^3.1.4:
     babel-runtime "^6.26.0"
     prop-types "^15.6.2"
 
+=======
+>>>>>>> 5c2c749970e404fcc85ee945ac2a33e80be595ef
 react-plotly.js@^2.3.0:
   version "2.3.0"
   resolved "https://registry.yarnpkg.com/react-plotly.js/-/react-plotly.js-2.3.0.tgz#c1e624e33e00e3c5bf7c482f3b80133097619070"
@@ -10871,6 +10887,7 @@ react-scripts@3.1.2:
   optionalDependencies:
     fsevents "2.0.7"
 
+<<<<<<< HEAD
 react-spinners-kit@^1.9.0:
   version "1.9.0"
   resolved "https://registry.yarnpkg.com/react-spinners-kit/-/react-spinners-kit-1.9.0.tgz#66d55530268f8b5d53816d8fdf90fa7fe04115ef"
@@ -10881,6 +10898,8 @@ react-spinners-kit@^1.9.0:
     react "^16.5.2"
     react-dom "^16.5.1"
 
+=======
+>>>>>>> 5c2c749970e404fcc85ee945ac2a33e80be595ef
 react-transition-group@^4.3.0:
   version "4.3.0"
   resolved "https://registry.yarnpkg.com/react-transition-group/-/react-transition-group-4.3.0.tgz#fea832e386cf8796c58b61874a3319704f5ce683"
@@ -10891,6 +10910,7 @@ react-transition-group@^4.3.0:
     loose-envify "^1.4.0"
     prop-types "^15.6.2"
 
+<<<<<<< HEAD
 react@^16.5.2:
   version "16.10.0"
   resolved "https://registry.yarnpkg.com/react/-/react-16.10.0.tgz#95c41e8fc1c706e174deef54b663b5ab94c8ee32"
@@ -10900,6 +10920,8 @@ react@^16.5.2:
     object-assign "^4.1.1"
     prop-types "^15.6.2"
 
+=======
+>>>>>>> 5c2c749970e404fcc85ee945ac2a33e80be595ef
 react@^16.9.0:
   version "16.9.0"
   resolved "https://registry.yarnpkg.com/react/-/react-16.9.0.tgz#40ba2f9af13bc1a38d75dbf2f4359a5185c4f7aa"
@@ -11673,6 +11695,7 @@ scheduler@^0.15.0:
     loose-envify "^1.1.0"
     object-assign "^4.1.1"
 
+<<<<<<< HEAD
 scheduler@^0.16.0:
   version "0.16.0"
   resolved "https://registry.yarnpkg.com/scheduler/-/scheduler-0.16.0.tgz#cc8914b79c5c1cfa16714cb1ddc4cbd2c7513efa"
@@ -11681,6 +11704,8 @@ scheduler@^0.16.0:
     loose-envify "^1.1.0"
     object-assign "^4.1.1"
 
+=======
+>>>>>>> 5c2c749970e404fcc85ee945ac2a33e80be595ef
 schema-utils@^1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/schema-utils/-/schema-utils-1.0.0.tgz#0b79a93204d7b600d4b2850d1f66c2a34951c770"
