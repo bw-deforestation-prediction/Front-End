@@ -104,7 +104,7 @@ const RegisterScreen = (props) => {
             <input 
             onChange={handleChange}
             name="email"
-            placeholder="Desired Email"
+            placeholder="Email has to be unique"
             type="email"
             value = {newUserInfo.email}
             required
